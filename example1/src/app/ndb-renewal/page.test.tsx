@@ -19,6 +19,11 @@ describe("/ndb-renewal ページ", () => {
     expect(html).toContain("コンサルテーションサービス");
   });
 
+  it("サービスメニュー詳細ページへの導線が表示されること", () => {
+    expect(html).toContain('href="/ndb-renewal/service"');
+    expect(html).toContain("サービスメニューの詳細を見る");
+  });
+
   it("採用向けセクションが表示されること", () => {
     expect(html).toContain("採用情報");
     expect(html).toContain("これからエンジニアとしての一歩を踏み出す方も");
