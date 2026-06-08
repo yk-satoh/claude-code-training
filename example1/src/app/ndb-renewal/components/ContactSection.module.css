@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: var(--content-max-width);
+  padding: 80px 24px 120px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.body {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--foreground-muted);
+}
+
+.note {
+  font-size: 0.8rem;
+  color: var(--foreground-muted);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 56px 20px 80px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+}

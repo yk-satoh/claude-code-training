@@ -1,0 +1,59 @@
+/* ブレークポイント: 960px(タブレット) / 640px(モバイル) ※page.module.cssと統一 */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.itemDescription {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--foreground-muted);
+}
+
+/* variant="card": サービス紹介などのカード型レイアウト */
+.card .item {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+/* variant="underline": 会社の特徴などの上線区切りレイアウト */
+.underline .item {
+  padding: 24px 0;
+  border-top: 2px solid var(--accent);
+}
+
+.underline .itemTitle {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 960px) {
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+}

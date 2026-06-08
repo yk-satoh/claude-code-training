@@ -1,0 +1,31 @@
+/*
+ * このページ配下のCSS Moduleが共通で参照するブレークポイント:
+ *   タブレット = 960px / モバイル = 640px
+ * （components/ 配下の各 .module.css でも同じ値を使用）
+ */
+.page {
+  --accent: #4f46e5;
+  --accent-strong: #4338ca;
+  --foreground-muted: #4b5563;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --content-max-width: 720px;
+
+  display: flex;
+  flex-direction: column;
+  /* layout.tsx の geistSans.variable がbodyに付与される前提で、
+   * トップページの page.module.css と同じくGeist Sansを明示的に指定する */
+  font-family: var(--font-geist-sans);
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --accent: #818cf8;
+    --accent-strong: #a5b4fc;
+    --foreground-muted: #a1a1aa;
+    --surface: #18181b;
+    --border: #27272a;
+  }
+}
