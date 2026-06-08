@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./ServiceSection.module.css";
 import InfoGrid, { type InfoGridItem } from "./InfoGrid";
 
@@ -27,6 +28,9 @@ export default function ServiceSection() {
         お客様の課題やフェーズに合わせて、3つのサービスを組み合わせてご提供しています。
       </p>
       <InfoGrid items={SERVICES} variant="card" />
+      <p className={styles.more}>
+        <Link href="/ndb-renewal/service">サービスメニューの詳細を見る</Link>
+      </p>
     </section>
   );
 }

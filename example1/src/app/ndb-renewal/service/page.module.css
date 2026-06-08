@@ -1,0 +1,51 @@
+/*
+ * このページ配下のCSS Moduleが共通で参照するブレークポイント:
+ *   タブレット = 960px / モバイル = 640px
+ * （/ndb-renewal トップページの page.module.css と同じCSS変数構成。
+ *   ルートが分かれており変数を共有できないため、ここで再定義している）
+ */
+.page {
+  --accent: #4f46e5;
+  --accent-strong: #4338ca;
+  --foreground-muted: #4b5563;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --content-max-width: 720px;
+
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 64px;
+  font-family: var(--font-geist-sans);
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --accent: #818cf8;
+    --accent-strong: #a5b4fc;
+    --foreground-muted: #a1a1aa;
+    --surface: #18181b;
+    --border: #27272a;
+  }
+}
+
+.backLink {
+  max-width: var(--content-max-width);
+  padding: 32px 24px 0;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.backLink a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .backLink {
+    padding: 24px 20px 0;
+  }
+}

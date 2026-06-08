@@ -16,6 +16,18 @@
   color: var(--foreground-muted);
 }
 
+.more {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.more a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 @media (max-width: 640px) {
   .section {
     padding: 56px 20px;

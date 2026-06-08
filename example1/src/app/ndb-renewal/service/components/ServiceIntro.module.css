@@ -1,0 +1,46 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: var(--content-max-width);
+  padding: 32px 24px 64px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.lead {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--foreground-muted);
+}
+
+@media (max-width: 640px) {
+  .intro {
+    padding: 24px 20px 48px;
+    gap: 12px;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .lead {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+}
